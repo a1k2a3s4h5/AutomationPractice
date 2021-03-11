@@ -72,8 +72,6 @@ public class TestScript {
 	    mainpage.setSubmitMessege();
 	}
 	
-	
-	
 	@AfterMethod
 	public void afterMethod() {
 		driver.quit();
