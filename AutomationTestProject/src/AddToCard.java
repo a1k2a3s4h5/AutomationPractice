@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -42,6 +43,8 @@ public class AddToCard {
 		String womenCategoryXpath = "//a[text()='Women']";
 		WebElement womenCategory = driver.findElement(By.xpath(womenCategoryXpath));
 		womenCategory.click();
+		
+		
 
 		/*
 		 * String womenTshirtXpath = "//li//ul/li/a[text()='T-shirts']"; WebElement
@@ -53,7 +56,10 @@ public class AddToCard {
 		String tshirtXpath = "//img[@alt='Faded Short Sleeve T-shirts']";
 		WebElement tshirt = driver.findElement(By.xpath(tshirtXpath));
 		WebElement addToCart1 = driver.findElement(By.xpath("//a[@class='button ajax_add_to_cart_button btn btn-default']/span[text()='Add to cart']"));
-		//tshirt.click();
+		tshirt.click();
+		//driver.switchTo().alert();
+		WebElement addToCartPopUpButton= driver.findElement(By.xpath("//p[@id='add_to_cart']/button"));
+		addToCartPopUpButton.click();
         Actions actions=new Actions(driver);
         actions.moveToElement(tshirt).moveToElement(addToCart1).click().perform();
 	//	

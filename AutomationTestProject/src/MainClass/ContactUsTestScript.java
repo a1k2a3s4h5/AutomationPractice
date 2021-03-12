@@ -14,7 +14,7 @@ import Pages.ContactUs;
 import methods.Methods;
 import utils.CreateBrowser;
 
-public class TestScript {
+public class ContactUsTestScript {
 
 	public WebDriver driver;
 	public ContactUs mainpage;

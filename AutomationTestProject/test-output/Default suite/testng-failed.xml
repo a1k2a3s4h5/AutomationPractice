@@ -4,17 +4,19 @@
   <parameter name="browser" value="Chrome"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MainClass.TestScriptOfHeader">
+      <class name="MainClass.TestScript">
         <methods>
+          <include name="contactUsWIthNotFillingUpEmailAddress"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="invalidSearch"/>
-          <include name="afterTest"/>
           <include name="afterClass"/>
+          <include name="afterTest"/>
           <include name="beforeMethod"/>
+          <include name="contactUsWithNotFillingOrderReferenceAndAttachFile"/>
           <include name="beforeClass"/>
+          <include name="contactUsWithFillUpAllDetails"/>
         </methods>
-      </class> <!-- MainClass.TestScriptOfHeader -->
+      </class> <!-- MainClass.TestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
