@@ -57,6 +57,8 @@ public class AddToCard {
 		WebElement tshirt = driver.findElement(By.xpath(tshirtXpath));
 		WebElement addToCart1 = driver.findElement(By.xpath("//a[@class='button ajax_add_to_cart_button btn btn-default']/span[text()='Add to cart']"));
 		tshirt.click();
+		WebElement iFrame = driver.findElement(By.tagName("iframe"));
+		driver.switchTo().frame(iFrame);
 		//driver.switchTo().alert();
 		WebElement addToCartPopUpButton= driver.findElement(By.xpath("//p[@id='add_to_cart']/button"));
 		addToCartPopUpButton.click();
