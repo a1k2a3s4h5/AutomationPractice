@@ -60,30 +60,33 @@ public class TesstScriptForLogIn {
 	}
 	
 	@Test(priority=1)
-	public void validSearch() throws InterruptedException{
+	public void inValidEmailSearch() throws InterruptedException{
 		Row rowValid = sheet.getRow(8);
 		Cell cellValid = rowValid.getCell(7);
 		String validValuesFromExcel = cellValid.getStringCellValue();
 		String[] validValues=validValuesFromExcel.split(",");
+		/*
+		 * for(int i=0;i<validValues.length;i++) { System.out.println(validValues[i]); }
+		 */
 		
-		for(String ref:validValues) {
- 			mainpage.setEmailTextBox(ref);
- 			Thread.sleep(3000);
+		for(int i=0;i<validValues.length;i++) {
+ 			mainpage.setEmailTextBox(validValues[i]);
  			mainpage.setPasswordTextBox("");
- 			Thread.sleep(5000);
- 			String value1 = mainpage.divTagOfEmail.getAttribute("class");
- 			if(mainpage.divTagOfEmail.getAttribute("class").contentEquals(value1)) {
- 				System.out.println("Test case passed");
- 			}
- 			else {
- 				System.out.println("Test case failed");
- 			}
+		
+			  if(mainpage.divTagOfEmail.getAttribute("class").contentEquals("form-group form-error")) {
+			  System.out.println("Test case passed"); } else {
+			  System.out.println("Test case failed"); }
+			 
  		}
 	}
 	
+	
 	/*
-	 * @Test(priority=2) public void invalidSearch() { }
+	 * @Test(priority=2) public void invalidSearch() {
+	 * 
+	 * }
 	 */
+	 
 	
 	@AfterMethod
 	public void afterMethod() {

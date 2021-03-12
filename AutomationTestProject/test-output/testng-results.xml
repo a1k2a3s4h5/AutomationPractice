@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-11T19:19:30 IST" name="Default suite" finished-at="2021-03-11T19:20:18 IST" duration-ms="48010">
+  <suite started-at="2021-03-12T14:23:46 IST" name="Default suite" finished-at="2021-03-12T14:24:24 IST" duration-ms="37332">
     <groups>
     </groups>
-    <test started-at="2021-03-11T19:19:30 IST" name="Default test" finished-at="2021-03-11T19:20:18 IST" duration-ms="48010">
-      <class name="MainClass.TesstScriptForLogIn">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:19:30 IST" name="beforeTest" finished-at="2021-03-11T19:19:31 IST" duration-ms="870" status="PASS">
+    <test started-at="2021-03-12T14:23:46 IST" name="Default test" finished-at="2021-03-12T14:24:24 IST" duration-ms="37332">
+      <class name="MainClass.TestScriptOfHeader">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:23:46 IST" name="beforeTest" finished-at="2021-03-12T14:23:48 IST" duration-ms="1214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:19:31 IST" name="beforeClass" finished-at="2021-03-11T19:19:31 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:23:48 IST" name="beforeClass" finished-at="2021-03-12T14:23:48 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:19:31 IST" name="beforeMethod" finished-at="2021-03-11T19:19:48 IST" duration-ms="17125" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:23:48 IST" name="beforeMethod" finished-at="2021-03-12T14:24:02 IST" duration-ms="14430" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,23 +26,302 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validSearch()[pri:1, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:19:48 IST" name="validSearch" finished-at="2021-03-11T19:20:17 IST" duration-ms="28898" status="PASS">
+        <test-method signature="validSearch()[pri:1, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:02 IST" name="validSearch" finished-at="2021-03-12T14:24:14 IST" duration-ms="12401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validSearch -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:20:17 IST" name="afterMethod" finished-at="2021-03-11T19:20:18 IST" duration-ms="1075" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:14 IST" name="afterMethod" finished-at="2021-03-12T14:24:16 IST" duration-ms="1300" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:20:18 IST" name="afterClass" finished-at="2021-03-11T19:20:18 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:16 IST" name="beforeMethod" finished-at="2021-03-12T14:24:24 IST" duration-ms="7894" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files (x86)\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DSK-541', ip: '10.0.2.251', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x0048E7D3+124883]
+Ordinal0 [0x0048E7B1+124849]
+GetHandleVerifier [0x006D8688+193832]
+GetHandleVerifier [0x006F07AC+292428]
+GetHandleVerifier [0x006EE0AC+282444]
+GetHandleVerifier [0x00714A90+440624]
+GetHandleVerifier [0x007147FC+439964]
+GetHandleVerifier [0x0071154B+426987]
+GetHandleVerifier [0x006F4FFD+310941]
+GetHandleVerifier [0x006F5D8E+314414]
+GetHandleVerifier [0x006F5D19+314297]
+GetHandleVerifier [0x007B31EC+1089676]
+GetHandleVerifier [0x007B17C9+1082985]
+GetHandleVerifier [0x007B13A3+1081923]
+GetHandleVerifier [0x008AD9FD+2115741]
+Ordinal0 [0x005DB82E+1488942]
+Ordinal0 [0x00575A7D+1071741]
+Ordinal0 [0x0057559B+1070491]
+Ordinal0 [0x005754B1+1070257]
+Ordinal0 [0x005AFF53+1310547]
+BaseThreadInitThunk [0x777AFA29+25]
+RtlGetAppContainerNamedObjectPath [0x77A376B4+228]
+RtlGetAppContainerNamedObjectPath [0x77A37684+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files (x86)\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DSK-541', ip: '10.0.2.251', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x0048E7D3+124883]
+Ordinal0 [0x0048E7B1+124849]
+GetHandleVerifier [0x006D8688+193832]
+GetHandleVerifier [0x006F07AC+292428]
+GetHandleVerifier [0x006EE0AC+282444]
+GetHandleVerifier [0x00714A90+440624]
+GetHandleVerifier [0x007147FC+439964]
+GetHandleVerifier [0x0071154B+426987]
+GetHandleVerifier [0x006F4FFD+310941]
+GetHandleVerifier [0x006F5D8E+314414]
+GetHandleVerifier [0x006F5D19+314297]
+GetHandleVerifier [0x007B31EC+1089676]
+GetHandleVerifier [0x007B17C9+1082985]
+GetHandleVerifier [0x007B13A3+1081923]
+GetHandleVerifier [0x008AD9FD+2115741]
+Ordinal0 [0x005DB82E+1488942]
+Ordinal0 [0x00575A7D+1071741]
+Ordinal0 [0x0057559B+1070491]
+Ordinal0 [0x005754B1+1070257]
+Ordinal0 [0x005AFF53+1310547]
+BaseThreadInitThunk [0x777AFA29+25]
+RtlGetAppContainerNamedObjectPath [0x77A376B4+228]
+RtlGetAppContainerNamedObjectPath [0x77A37684+180]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at utils.CreateBrowser.openBrowser(CreateBrowser.java:15)
+at MainClass.TestScriptOfHeader.beforeMethod(TestScriptOfHeader.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:701)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="invalidSearch()[pri:2, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:24 IST" name="invalidSearch" finished-at="2021-03-12T14:24:24 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files (x86)\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DSK-541', ip: '10.0.2.251', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x0048E7D3+124883]
+Ordinal0 [0x0048E7B1+124849]
+GetHandleVerifier [0x006D8688+193832]
+GetHandleVerifier [0x006F07AC+292428]
+GetHandleVerifier [0x006EE0AC+282444]
+GetHandleVerifier [0x00714A90+440624]
+GetHandleVerifier [0x007147FC+439964]
+GetHandleVerifier [0x0071154B+426987]
+GetHandleVerifier [0x006F4FFD+310941]
+GetHandleVerifier [0x006F5D8E+314414]
+GetHandleVerifier [0x006F5D19+314297]
+GetHandleVerifier [0x007B31EC+1089676]
+GetHandleVerifier [0x007B17C9+1082985]
+GetHandleVerifier [0x007B13A3+1081923]
+GetHandleVerifier [0x008AD9FD+2115741]
+Ordinal0 [0x005DB82E+1488942]
+Ordinal0 [0x00575A7D+1071741]
+Ordinal0 [0x0057559B+1070491]
+Ordinal0 [0x005754B1+1070257]
+Ordinal0 [0x005AFF53+1310547]
+BaseThreadInitThunk [0x777AFA29+25]
+RtlGetAppContainerNamedObjectPath [0x77A376B4+228]
+RtlGetAppContainerNamedObjectPath [0x77A37684+180]
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: exited normally.
+  (chrome not reachable)
+  (The process started from chrome location C:\Program Files (x86)\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DSK-541', ip: '10.0.2.251', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+Ordinal0 [0x0048E7D3+124883]
+Ordinal0 [0x0048E7B1+124849]
+GetHandleVerifier [0x006D8688+193832]
+GetHandleVerifier [0x006F07AC+292428]
+GetHandleVerifier [0x006EE0AC+282444]
+GetHandleVerifier [0x00714A90+440624]
+GetHandleVerifier [0x007147FC+439964]
+GetHandleVerifier [0x0071154B+426987]
+GetHandleVerifier [0x006F4FFD+310941]
+GetHandleVerifier [0x006F5D8E+314414]
+GetHandleVerifier [0x006F5D19+314297]
+GetHandleVerifier [0x007B31EC+1089676]
+GetHandleVerifier [0x007B17C9+1082985]
+GetHandleVerifier [0x007B13A3+1081923]
+GetHandleVerifier [0x008AD9FD+2115741]
+Ordinal0 [0x005DB82E+1488942]
+Ordinal0 [0x00575A7D+1071741]
+Ordinal0 [0x0057559B+1070491]
+Ordinal0 [0x005754B1+1070257]
+Ordinal0 [0x005AFF53+1310547]
+BaseThreadInitThunk [0x777AFA29+25]
+RtlGetAppContainerNamedObjectPath [0x77A376B4+228]
+RtlGetAppContainerNamedObjectPath [0x77A37684+180]
+
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at utils.CreateBrowser.openBrowser(CreateBrowser.java:15)
+at MainClass.TestScriptOfHeader.beforeMethod(TestScriptOfHeader.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:701)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidSearch -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:24 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1615539264172" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:24 IST" name="afterClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1615539264181" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:MainClass.TesstScriptForLogIn@45b9a632]" started-at="2021-03-11T19:20:18 IST" name="afterTest" finished-at="2021-03-11T19:20:18 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:MainClass.TestScriptOfHeader@25d250c6]" started-at="2021-03-12T14:24:24 IST" name="afterTest" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1615539264183" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- MainClass.TesstScriptForLogIn -->
+      </class> <!-- MainClass.TestScriptOfHeader -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

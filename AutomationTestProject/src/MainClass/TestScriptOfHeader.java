@@ -56,7 +56,7 @@ public class TestScriptOfHeader {
 	
 	@Test(priority=1)
 	public void validSearch(){
-		headerObject.setHeader();
+		headerObject.header.click();
 		headerObject.setLogo();
 		Row rowValid = sheet.getRow(15);
 		Cell cellValid = rowValid.getCell(5);
@@ -71,7 +71,7 @@ public class TestScriptOfHeader {
 	
 	@Test(priority=2)
 	public void invalidSearch() {
-		headerObject.setHeader();
+		headerObject.header.click();
 		headerObject.setLogo();
 		Row rowInValid = sheet.getRow(19);
 		Cell cellInValid = rowInValid.getCell(5);

@@ -11,7 +11,6 @@
           <include name="invalidSearch"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
-          <include name="validSearch"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>

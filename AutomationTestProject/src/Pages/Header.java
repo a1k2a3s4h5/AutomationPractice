@@ -26,9 +26,9 @@ public class Header {
 	@FindBy(how=How.XPATH , using="//a[@title='View my shopping cart']")
 	public WebElement cartBox;
 	
-	public void setHeader() {
-		header.click();
-	}
+	/*
+	 * public void setHeader() { header.click(); }
+	 */
 	
 	public void setLogo() {
 		logo.click();

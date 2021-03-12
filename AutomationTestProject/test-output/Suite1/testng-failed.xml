@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ContactUs(failed)">
-    <parameter name="browser" value="Chrome"/>
+  <parameter name="browser" value="Chrome"/>
+  <test thread-count="5" name="LogIn(failed)">
     <classes>
-      <class name="MainClass.TestScript">
+      <class name="MainClass.TesstScriptForLogIn">
         <methods>
-          <include name="contactUsWIthNotFillingUpEmailAddress"/>
+          <include name="beforeClass"/>
+          <include name="validSearch"/>
+          <include name="afterClass"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
           <include name="beforeMethod"/>
-          <include name="contactUsWithNotFillingOrderReferenceAndAttachFile"/>
-          <include name="beforeClass"/>
-          <include name="contactUsWithFillUpAllDetails"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- MainClass.TestScript -->
+      </class> <!-- MainClass.TesstScriptForLogIn -->
     </classes>
-  </test> <!-- ContactUs(failed) -->
+  </test> <!-- LogIn(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
