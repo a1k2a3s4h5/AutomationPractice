@@ -4,17 +4,15 @@
   <parameter name="browser" value="Chrome"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MainClass.ProceedToCheckoutTestScript">
+      <class name="MainClass.SignUpTestScript">
         <methods>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
           <include name="afterClass"/>
+          <include name="afterMethod"/>
           <include name="f"/>
-          <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- MainClass.ProceedToCheckoutTestScript -->
+      </class> <!-- MainClass.SignUpTestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
