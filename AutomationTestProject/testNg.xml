@@ -10,10 +10,20 @@
     <classes>
        <class name="MainClass.TestScriptOfHeader" />
     </classes>
-  </test>-->
+  </test>
   <test name="LogIn" >
     <classes>
        <class name="MainClass.TesstScriptForLogIn" />
+    </classes>
+  </test>
+  <test name="addTocart">
+  	<classes>
+       <class name="MainClass.addToCartButtonWorking" />
+    </classes>
+  </test>-->
+  <test name="proceedToCheckout">
+  	<classes>
+       <class name="MainClass.ProceedToCheckoutTestScript" />
     </classes>
   </test>
 </suite>
