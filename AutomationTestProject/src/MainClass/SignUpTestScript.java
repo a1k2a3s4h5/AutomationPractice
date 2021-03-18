@@ -38,6 +38,31 @@ public class SignUpTestScript {
 	  obj.createAccount.click();
 	  for(int i=1;i<2;i++) {
 		  Row rowValid = sheet.getRow(i);
+		  if(rowValid.getCell(0).getStringCellValue().contentEquals("Mr.")) {
+			  obj.mr.click();
+		  }
+		  else {
+			  obj.mrs.click();
+		  }
+		  
+		  obj.firstName.sendKeys(rowValid.getCell(1).getStringCellValue());
+		  obj.lastName.sendKeys(rowValid.getCell(2).getStringCellValue());
+		  obj.password.sendKeys(rowValid.getCell(3).getStringCellValue());
+		  obj.firstName2.sendKeys(rowValid.getCell(1).getStringCellValue());
+		  obj.lastName2.sendKeys(rowValid.getCell(2).getStringCellValue());
+		  obj.company.sendKeys(rowValid.getCell(9).getStringCellValue());
+		  obj.address.sendKeys(rowValid.getCell(10).getStringCellValue());
+		  obj.city.sendKeys(rowValid.getCell(11).getStringCellValue());
+		  Select stateSelect= new Select (obj.state);
+		  stateSelect.selectByVisibleText(rowValid.getCell(12).getStringCellValue());
+		  obj.postCode.sendKeys(String.valueOf((int)(rowValid.getCell(13).getNumericCellValue())));
+			/*
+			 * Select countrySelect= new Select (obj.state);
+			 * countrySelect.selectByVisibleText(rowValid.getCell(14).getStringCellValue());
+			 */
+		  obj.phone.sendKeys(String.valueOf((long)(rowValid.getCell(16).getNumericCellValue())));
+		  obj.aliasAddress.sendKeys(rowValid.getCell(17).getStringCellValue());
+		  
 		  Select daySelect = new Select(obj.day);
 		  //System.out.println(String.valueOf((int)(rowValid.getCell(4).getNumericCellValue())));
 		  daySelect.selectByValue(String.valueOf((int)(rowValid.getCell(4).getNumericCellValue())));  
@@ -45,6 +70,8 @@ public class SignUpTestScript {
 		  monthSelect.selectByVisibleText(rowValid.getCell(5).getStringCellValue());
 		  Select yearSelect = new Select(obj.year);
 		  yearSelect.selectByValue(String.valueOf((int)(rowValid.getCell(6).getNumericCellValue())));
+		  
+		  obj.submitAccount.click();
 	  }
 	  
 	  

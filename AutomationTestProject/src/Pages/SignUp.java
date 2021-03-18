@@ -8,6 +8,12 @@ public class SignUp {
 	
 	@FindBy(how=How.XPATH,using="//a[contains(text(),'Sign in')]")
 	public WebElement signIn;
+	
+	@FindBy(how=How.ID,using="id_gender1")
+	public WebElement mr;
+	
+	@FindBy(how=How.ID,using="id_gender2")
+	public WebElement mrs;
 
 	@FindBy(how=How.ID,using="email_create")
 	public WebElement createEmail;
@@ -18,11 +24,18 @@ public class SignUp {
 	@FindBy(how=How.XPATH,using="//div[@id='create_account_error']/ol/li")
 	public WebElement createAccountError;
 	
-	@FindBy(how=How.ID,using="uniform-id_gender2")
-	public WebElement mrs;
+	/*
+	 * @FindBy(how=How.ID,using="uniform-id_gender2") public WebElement mrs;
+	 */
 
 	@FindBy(how=How.ID,using="customer_firstname")
 	public WebElement firstName;
+	
+	@FindBy(how=How.ID,using="firstname")
+	public WebElement firstName2;
+	
+	@FindBy(how=How.ID,using="lastname")
+	public WebElement lastName2;
 
 	@FindBy(how=How.ID,using="customer_lastname")
 	public WebElement lastName;

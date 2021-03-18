@@ -14,6 +14,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -33,64 +34,77 @@ public class SearchBarTestCaseScript {
     
 	@BeforeTest
 	public void beforeTest() throws Exception {
-		System.out.println("Am in beforeTest method");
 		fs = new FileInputStream("C:\\Users\\akash.patel\\Desktop\\AutomationPractice\\Homepage_main_section_test_cases.xlsx");
-		workbook = new XSSFWorkbook(fs);
-		sheet = workbook.getSheetAt(0);
+		//workbook = new XSSFWorkbook(fs);
+		//sheet = workbook.getSheetAt(0);
 	}
 	
-	@BeforeClass
-	public void beforeClass() {
-		System.out.println("Am in beforeClass method");	
-	}
 	
 	@Parameters("browser")
-	@BeforeMethod
-	public void beforeMethod(String browser) {
+	@BeforeClass
+	public void beforeClass(String browser) {
 		driver=CreateBrowser.openBrowser(browser);
 		Methods.maxWindow(driver);
 		Methods.implicitWait(driver);
 		driver.get("http://automationpractice.com/");
-		headerObject = PageFactory.initElements(driver, Header.class);
+		headerObject = new Header(driver);//PageFactory.initElements(driver, Header.class);
 	}
 	
-	@Test(priority=1)
-	public void validSearch(){
-		headerObject.header.click();
-		headerObject.setLogo();
-		Row rowValid = sheet.getRow(15);
-		Cell cellValid = rowValid.getCell(5);
-		String validValuesFromExcel = cellValid.getStringCellValue();
-		String[] validValues=validValuesFromExcel.split(",");
-		//System.out.println(cellValid.getStringCellValue());
- 		for(String ref:validValues) {
- 			headerObject.setSearchbar(ref);
- 			headerObject.setSearchButton();
- 		}
+	
+	@BeforeMethod
+	public void beforeMethod() {
+		
 	}
 	
-	@Test(priority=2)
-	public void invalidSearch() {
+	@DataProvider (name = "data-provider1")
+	    public Object[] validSearchData(){
+	    return new Object[] {"Dress","kurties","Pants"};
+	}
+	
+	@DataProvider (name = "data-provider2")
+    public Object[] invalidSearchData(){
+    return new Object[] {"Hii","how are you","kem cho","Majama"};
+    }
+	
+	@Test(priority=1 ,dataProvider="data-provider1")
+	public void validSearch(String validVals){
 		headerObject.header.click();
 		headerObject.setLogo();
-		Row rowInValid = sheet.getRow(19);
-		Cell cellInValid = rowInValid.getCell(5);
-		String inValidValuesFromExcel = cellInValid.getStringCellValue();
-		String[] validInValues=inValidValuesFromExcel.split(",");
-		for(String ref:validInValues) {
- 			headerObject.setSearchbar(ref);
+		/*
+		 * Row rowValid = sheet.getRow(15); Cell cellValid = rowValid.getCell(5); String
+		 * validValuesFromExcel = cellValid.getStringCellValue(); String[]
+		 * validValues=validValuesFromExcel.split(",");
+		 * //System.out.println(cellValid.getStringCellValue()); for(String
+		 * ref:validValues) {
+		 */
+ 			headerObject.setSearchbar(validVals);
  			headerObject.setSearchButton();
- 		}
+			/* } */
+	}
+	
+	@Test(priority=2 , dataProvider="data-provider2")
+	public void invalidSearch(String inValidVals) {
+		headerObject.header.click();
+		headerObject.setLogo();
+		/*
+		 * Row rowInValid = sheet.getRow(19); Cell cellInValid = rowInValid.getCell(5);
+		 * String inValidValuesFromExcel = cellInValid.getStringCellValue(); String[]
+		 * validInValues=inValidValuesFromExcel.split(","); for(String
+		 * ref:validInValues) {
+		 */
+ 			headerObject.setSearchbar(inValidVals);
+ 			headerObject.setSearchButton();
+			/* } */
 	}
 	
 	@AfterMethod
 	public void afterMethod() {
-		driver.quit();
+		
 	}
 	
 	@AfterClass
 	public void afterClass() {
-		System.out.println("Am in afterClass method");
+		driver.quit();
 	}
 	
 	@AfterTest

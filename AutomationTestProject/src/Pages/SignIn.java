@@ -21,6 +21,14 @@ public class SignIn {
 	@FindBy(how=How.XPATH , using ="//input[@id='email']//parent::div")
 	public WebElement divTagOfEmail;
 	
+	@FindBy(how=How.ID,using="SubmitLogin")
+	public WebElement submitButton;
+	
+	@FindBy(how=How.XPATH , using ="//div[@id='center_column']//li")
+	public WebElement errorMessege;
+	
+	
+	
 	public void setHomePageSignInButton() {
 	homePageSignInButton.click();	
 	}
